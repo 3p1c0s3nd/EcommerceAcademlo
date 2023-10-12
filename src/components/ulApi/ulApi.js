@@ -57,7 +57,7 @@ function ulApi() {
             //mostrarfiltro += `<ul class="article__ul ul">`;
             for(const datos of data){
                 mostrarfiltro += `
-                    <li class="ul__li" onClick="localStorage.setItem('productModal', ${datos.id})">
+                    <li class="ul__li" onClick="window.location='../../../detail.html?id=${datos.id}'">
                       <img src=${datos.image} alt=${datos.name} class='ul__img'>
           
                       <div class='ul__div'>
@@ -66,6 +66,8 @@ function ulApi() {
                       </div>
                     </li>
                 `;
+
+             
                 
             }    
             //mostrarfiltro += `</ul>`; 

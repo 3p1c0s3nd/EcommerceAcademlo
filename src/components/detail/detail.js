@@ -1,11 +1,21 @@
 import localStorageCart from "./localStorageCart.js"
 
+function mezclarArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
 function detail() {
 
   const params = window.location.search
-
+  
   //obtencion del id
   const productId = Number(params.split('=')[1]) //5
+  console.log(params.split('=')[1]);
+  if(params.split('=')[1] == undefined){
+    window.location = './index.html';
+  }
 
   const sectionDetail = document.querySelector('#section_detail')
 
@@ -23,7 +33,8 @@ function detail() {
     const res = await fetch(url)
     try {
       const data = await res.json()
-
+      const arrayrelacionados = [];
+      
       for (const product of data) {
         if (product.id === productId) {
           console.log(product);
@@ -88,16 +99,37 @@ function detail() {
             localStorageCart(size,divButtonSizes, productId, product.name, product.price, product.image);
           })
 
-
-
-
-
-
-
-
+        }else{
+          arrayrelacionados.push(product);
         }
-
+        
       }
+
+     
+      ////Seccion Productos Relacionados
+      const ulRelacionados = document.querySelector('#ul__api');
+      let contador = 1;
+      mezclarArray(arrayrelacionados);
+      arrayrelacionados.forEach((product) => {
+        if(contador > 5){
+          return;
+        }
+        const nuevoli = document.createElement('li');
+        nuevoli.classList.add('ul__li');
+        nuevoli.onclick = () => {
+          window.location = `../../../detail.html?id=${product.id}`
+        }
+        nuevoli.innerHTML += `
+                      <img src=${product.image} alt=${product.name} class='ul__img'>
+          
+                      <div class='ul__div'>
+                        <h2 class='ul__h2'>${product.name}</h2>
+                        <h3 class='ul__h3'>$${product.price}.00</h3>
+                      </div>
+        `;
+        ulRelacionados.appendChild(nuevoli);
+        contador++;
+      })
 
 
     } catch (error) {

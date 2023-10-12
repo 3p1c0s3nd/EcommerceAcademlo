@@ -14,6 +14,43 @@
   
 }
 
+#footer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+#footer__titulo,
+#footer__titulo{
+  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+    font-size: 1rem;
+    width: 80%;
+    position: relative;
+}
+
+#email{
+  height: 5vh;
+  background-color: #e4e5e7;
+  margin: 0;
+  width: 300px;
+  border: 0;
+}
+
+#botton{
+  height: 5vh;
+  width: 150px;
+  background-color: #274672;
+  margin: 0;
+  color:azure
+}
+
+
 
 
 .ul__li--detail {
@@ -87,6 +124,101 @@
   padding: 0;
   color:aliceblue;
 }
+
+.ul__h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 80%;
+  position: relative;
+}
+
+.ul__h2::before,
+.ul__h2::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color-primary);
+  position: absolute;
+  border-radius: 50%;
+  top: 105%;
+  left: 0;
+}
+
+.ul__h2::after {
+  background-color: var(--background-header);
+  left: 30px;
+}
+
+.ul__h3 {
+  font-weight: var(--font-weight-medium);
+  align-self: flex-end;
+}
+
+.ul__li:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px 10px #EB4A5A;
+  transform: translateY(-10px);
+  /*border-radius: 15%;*/
+}
+
+.ul__li:hover .ul__img {
+  transform: translatex(5px);
+}
+
+
+.ul__div {
+  --background-card: #caced5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 0 5px;
+  background-color: var(--background-card);
+  width: 100%;
+  height: 35%;
+  border-radius: 15%;
+  color:white;
+}
+
+#section_detail{
+  padding-bottom: 10vh;
+}
+
+#titulo_relacionados{
+  padding-left: 3vw;
+  color:black;
+  font-weight: 800;
+
+}
+
+.ul__li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  height: 380px;
+  transition: box-shadow 0.33s, transform 0.33s;
+  background-color: white;
+  border-radius: 12%;
+}
+
+.ul__img {
+  width: 90%;
+  transition: transform 0.33s;
+}
+
+.article__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 30px;
+  margin: 20px 0;
+}
+
+
 
 .ul__h4--div {
   font-size: 0.8rem;
