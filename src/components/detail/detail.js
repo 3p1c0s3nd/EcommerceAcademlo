@@ -98,6 +98,9 @@ function detail() {
 
           ulButtonDiv.addEventListener(('click'), () => {
             localStorageCart(size,divButtonSizes, productId, product.name, product.price, product.image);
+            size = null;
+            const cartDisplay = document.querySelector('#menu_cart');
+            cartDisplay.classList.add('main__section--cartActive');
           })
 
         }else{
@@ -149,8 +152,8 @@ function detail() {
 
   productApi()
 
-  const carrito = document.querySelector(".bx-cart");
-  carrito.onclick = mostrarCarrito;
+  //const carrito = document.querySelector(".bx-cart");
+  //carrito.onclick = mostrarCarrito;
 }
 
 function mostrarCarrito(){

@@ -40,21 +40,7 @@
 
 }
 
-#titulo_flotante {
-  color: #000;
-}
 
-.ul__img__flotante,
-.ul__li_flotante {
-  width: 400px !important;
-  height: 200px !important;
-}
-
-.ul__li_flotante {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: start;
-}
 
 
 

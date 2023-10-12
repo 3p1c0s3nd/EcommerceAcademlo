@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="./src/components/nav/nav.css">
   <link rel="stylesheet" href="./src/components/back/back.css">
   <link rel="stylesheet" href="./src/components/detail/detail.css">
+  <link rel="stylesheet" href="./src/components/cart/cart.css">
 </head>
 
 <body class="body">
@@ -28,7 +29,7 @@
 
   <main class="body__main main">
 
-    <div class="overlay">
+    
     <section class="main__section section" id="section_detail">
 
       <div id="back" class="main__div--back">
@@ -65,11 +66,23 @@
       </form>
     </footer>
 
-    </div>
+    <!-- cart-->
+    <section id="menu__cart" class="main__section--cart section">
+      <i id="x" class="bx bx-x" id="close"></i>
+      <h2 class="section__h2">Carrito de Compras</h2>
+      <ul class="section__ul--cart" id="cart_list">
+        <!-- Aqui insertaremos el carrito -->
+      </ul>
+      <div  class="section__div--total">
+        <h2 class="section__h2--total">Subtotal</h2>
+        <p class="section__p--total" id="sub_total"></p>
+      </div>
+
+    </section>
   </main>
 
     <!-- Aqui colocamos el div flotante -->
-    <section class="main__section section flotante">
+    <section class="main__section section flotante" style="display: none">
       <div class="ul__div--li"  >
         <h1 class="ul__h1--div" id="titulo_flotante">
           Productos Del Carrito

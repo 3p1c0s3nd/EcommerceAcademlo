@@ -27,3 +27,7 @@
   width: 7rem;
   cursor: pointer;
 }
+
+.nav__li > i{
+  cursor: pointer;
+}

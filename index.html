@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="./src/primary-styles/body.css">
   <link rel="stylesheet" href="./src/primary-styles/articleApi.css">
   <link rel="stylesheet" href="./src/components/ulApi/ulApi.css">
+  <link rel="stylesheet" href="./src/components/cart/cart.css">
 
 </head>
 
@@ -58,6 +59,21 @@
       </article>
 
     </section>
+
+
+      <!-- cart-->
+      <section id="menu__cart" class="main__section--cart section">
+        <i id="x" class="bx bx-x" id="close"></i>
+        <h2 class="section__h2">Carrito de Compras</h2>
+        <ul class="section__ul--cart" id="cart_list">
+          <!-- Aqui insertaremos el carrito -->
+        </ul>
+        <div  class="section__div--total">
+          <h2 class="section__h2--total">Subtotal</h2>
+          <p class="section__p--total" id="sub_total"></p>
+        </div>
+  
+      </section>
   </main>
 
   <script type="module" src="./main.js"></script>
