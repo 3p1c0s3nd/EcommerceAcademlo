@@ -4,6 +4,7 @@
   height: 6vh;
   display: flex;
   align-items: center;
+  
 }
 
 .main__a--back {
@@ -18,6 +19,7 @@
 .main__a--back>span {
   margin-left: 2em;
   font-weight: var(--font-weight-bold);
+  color:aliceblue;
 }
 
 @media (max-width:550px) {

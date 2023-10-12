@@ -8,10 +8,10 @@
 }
 
 .body{
-  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcGBicB4U_s0mu8KzW92gEIixR6C80WeTud5ioQlRNu_vYx1MWQqT5tKU1g6hvM50Q8E&usqp=CAU');
+  background-image:url('https://media.istockphoto.com/id/1294603953/es/vector/parte-diagonal-de-las-rayas-negras-abstractas.jpg?s=1024x1024&w=is&k=20&c=L6JL2el1OQ-DtzcbP0EfNG8OFh5JQ6A0NIcsHqSt3CY=');
   background-repeat: no-repeat;
   background-size: cover;
-  color:white;
+  
 }
 
 
@@ -33,19 +33,22 @@
 .ul__h1--div {
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
-  margin: 0
+  margin: 0;
+  color:aliceblue;
 }
 
 .ul__h2--div {
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
   margin: 1em 0 0 0;
+  color:aliceblue;
 }
 
 .ul__p--div {
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   margin: 3em 0 0 0;
+  color:aliceblue;
 }
 
 .ul__img--div {
@@ -53,6 +56,7 @@
   margin: 1em 0 2em 0;
   transition: transform 0.33s ;
   border-radius: 12%;
+  
   
 }
 
@@ -81,6 +85,7 @@
   font-weight: var(--font-weight-bold);
   margin: 0;
   padding: 0;
+  color:aliceblue;
 }
 
 .ul__h4--div {
