@@ -85,7 +85,7 @@ function detail() {
           const ulButtonDiv = document.querySelector('.ul__button--div')
 
           ulButtonDiv.addEventListener(('click'), () => {
-            localStorageCart(size,divButtonSizes)
+            localStorageCart(size,divButtonSizes, productId, product.name, product.price, product.image);
           })
 
 
