@@ -16,7 +16,8 @@ function detail() {
   if(params.split('=')[1] == undefined){
     window.location = './index.html';
   }
-
+  
+  document.querySelector(".flotante").style.display = "none";
   const sectionDetail = document.querySelector('#section_detail')
 
   const ul = document.createElement('ul')
@@ -136,6 +137,9 @@ function detail() {
       console.log(error);
     }
 
+
+    
+
   }
 
 
@@ -144,6 +148,39 @@ function detail() {
   ul.appendChild(li)
 
   productApi()
+
+  const carrito = document.querySelector(".bx-cart");
+  carrito.onclick = mostrarCarrito;
+}
+
+function mostrarCarrito(){
+    let element =  document.querySelector(".flotante");
+    let elementStyle = window.getComputedStyle(element);
+    let valordisplay = elementStyle.getPropertyValue('display');
+    if(valordisplay == "none"){
+      document.querySelector(".flotante").style.display = "flex";
+    }else{
+      document.querySelector(".flotante").style.display = "none";
+    }
+    const flotante = document.querySelector('#ul__flotante');
+    flotante.innerHTML = "";
+    const leercart = localStorage.getItem("cart");
+    const leercart2 = JSON.parse(leercart);
+    leercart2.forEach((product) => {
+      const li = document.createElement('li');
+      li.classList.add('ul__li');
+      li.classList.add('ul__li_flotante');
+      li.innerHTML += `
+      <img src=${product.image} alt=${product.name} class='ul__img__flotante'>
+      
+      <div class='ul__div '>
+      <h2 class=''>Talla: ${product.size}</h2>
+        <h2 class='ul__h2'>${product.name}</h2>
+        <h3 class='ul__h3'>$${product.price}.00</h3>
+      </div>
+      `;
+      flotante.appendChild(li);
+    })
 }
 
 export default detail

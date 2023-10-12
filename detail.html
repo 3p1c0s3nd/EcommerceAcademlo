@@ -28,6 +28,7 @@
 
   <main class="body__main main">
 
+    <div class="overlay">
     <section class="main__section section" id="section_detail">
 
       <div id="back" class="main__div--back">
@@ -38,34 +39,46 @@
 
     </section>
 
+    <!-- Aqui colocamos los productos relacionados -->
+    <section class="main__section section ">
+      <div class="ul__div--li">
+        <h1 class="ul__h1--div">
+          Productos Relacionados
+          <h1>
+            <ul id="ul__api" class="article__ul ">
 
-    <section class="main__section section" >
-   <div class="ul__div--li" >
-    <h1 class="ul__h1--div" >
-        Productos Relacionados
-      <h1>
-      <ul id="ul__api" class="article__ul ">
+            </ul>
+      </div>
+    </section>
 
-        </ul>
+    <!-- Aqui colocamos el footer -->
+    <footer class="main__section section" id="footer">
+      <h1 class="ul__h1--div" id="footer__titulo">
+        Mantente en contacto
+      </h1>
+      <h2 id="footer__subtitulo">
+        !Suscribete para recibir noticias de productos y descuentos especiales!
+      </h2>
+      <form action="" method="POST" id="formulario">
+        <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
+        <input type="submit" value="Suscribirse" id="botton">
+      </form>
+    </footer>
+
     </div>
-  </section>
-      <!-- Aqui colocamos los productos relacionados -->
-   
-        <footer class="main__section section" id="footer">
-          <h1 class="ul__h1--div" id="footer__titulo">
-            Mantente en contacto
-          </h1>
-          <h2  id="footer__subtitulo">
-            !Suscribete para recibir noticias de productos y descuentos especiales!
-          </h2>
-          <form action="" method="POST" id="formulario">
-            <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
-            <input type="submit" value="Suscribirse" id="botton">  
-          </form>
-        </footer>
   </main>
 
- 
+    <!-- Aqui colocamos el div flotante -->
+    <section class="main__section section flotante">
+      <div class="ul__div--li"  >
+        <h1 class="ul__h1--div" id="titulo_flotante">
+          Productos Del Carrito
+          <h1>
+            <ul id="ul__flotante" class="article__ul ">
+
+            </ul>
+      </div>
+    </section>
 
 
 

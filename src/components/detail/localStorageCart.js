@@ -24,6 +24,7 @@ function localStorageCart(size, buttons, productId, name, price, image) {
     const arrayJSON = JSON.stringify(arrayCart);
     localStorage.setItem('cart', arrayJSON);
 
+    console.log(carGet);
     buttons.forEach((btn) => {
       btn.classList.remove('div__button--active');
     })
