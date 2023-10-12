@@ -154,6 +154,15 @@ function detail() {
 }
 
 function mostrarCarrito(){
+    const flotante = document.querySelector('#ul__flotante');
+    flotante.innerHTML = "";
+    const leercart = localStorage.getItem("cart");
+    const leercart2 = JSON.parse(leercart);
+    if(leercart2 == null){
+      alert("Debe agregar productos al carrito para poder visualizarlos primero");
+      return;
+    }
+
     let element =  document.querySelector(".flotante");
     let elementStyle = window.getComputedStyle(element);
     let valordisplay = elementStyle.getPropertyValue('display');
@@ -162,10 +171,7 @@ function mostrarCarrito(){
     }else{
       document.querySelector(".flotante").style.display = "none";
     }
-    const flotante = document.querySelector('#ul__flotante');
-    flotante.innerHTML = "";
-    const leercart = localStorage.getItem("cart");
-    const leercart2 = JSON.parse(leercart);
+    
     leercart2.forEach((product) => {
       const li = document.createElement('li');
       li.classList.add('ul__li');

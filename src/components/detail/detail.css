@@ -23,7 +23,7 @@
   /* Opcionalmente, puedes usar "absolute" en lugar de "fixed" */
   top: 100px;
   /* Distancia desde la parte superior */
-  left: 400px;
+  left: 100px;
   /* Distancia desde la izquierda */
   display: flex;
   justify-content: center;
