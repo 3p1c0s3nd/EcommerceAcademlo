@@ -7,6 +7,15 @@
   padding: 0 5%;
 }
 
+.body{
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcGBicB4U_s0mu8KzW92gEIixR6C80WeTud5ioQlRNu_vYx1MWQqT5tKU1g6hvM50Q8E&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+
+
+
 .ul__li--detail {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -41,14 +50,21 @@
 
 .ul__img--div {
   width: 150px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
   margin: 1em 0 2em 0;
-  transition: transform 0.33s;
+  transition: transform 0.33s ;
+  border-radius: 12%;
+  
 }
 
 .ul__img--div:hover {
+  cursor: pointer;
   transform: scale(1.05);
+  border: 1px solid #EB4A5A;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
+
+
 
 .ul__div--div {
   display: flex;
@@ -257,3 +273,6 @@
     margin: 40px auto;
   }
 }
+
+
+
