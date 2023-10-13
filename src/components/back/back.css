@@ -30,3 +30,9 @@
   }
 
 }
+
+.bx-arrow-back,
+.main__span--back,
+.main__a--back{
+  color:white !important;
+}

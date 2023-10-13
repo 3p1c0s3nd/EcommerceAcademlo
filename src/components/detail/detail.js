@@ -1,4 +1,5 @@
 import localStorageCart from "./localStorageCart.js"
+import cart from "../../../src/components/cart/cart.js"
 
 function mezclarArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -99,6 +100,7 @@ function detail() {
           ulButtonDiv.addEventListener(('click'), () => {
             localStorageCart(size,divButtonSizes, productId, product.name, product.price, product.image);
             size = null;
+            cart();
             const cartDisplay = document.querySelector('#menu_cart');
             cartDisplay.classList.add('main__section--cartActive');
           })

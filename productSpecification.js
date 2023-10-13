@@ -14,5 +14,7 @@ const menuCart = document.getElementById('menu__cart');
 const x = document.getElementById('x');
 
 
+
+
 toggleVisibilityOnClick(cartNav, menuCart);
 toggleVisibilityOnClick(x, menuCart);

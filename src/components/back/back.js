@@ -4,7 +4,7 @@ function back() {
 
   back.innerHTML = `
     <a href="../../../index.html" class='main__a--back'>
-      <i class='bx bx-arrow-back'></i> <span> Academlo - Tienda oficial</span>
+      <i class='bx bx-arrow-back'></i> <span class='main__span--back' > Academlo - Tienda oficial</span>
     </a>
   `
 

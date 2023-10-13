@@ -2,6 +2,7 @@ function cart(){
     const ul = document.getElementById('cart_list');
     const itemsCart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    ul.innerHTML = "";
    for(const product of itemsCart){
     const li = document.createElement('li');
     li.classList.add('section__li--cart');
